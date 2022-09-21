@@ -1,12 +1,16 @@
 import React, { FC } from 'react';
+import { useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { AppForm } from '@components/AppForm';
 import { AppInput } from '@components/AppInput';
+import { submitVoteAction } from '@store/actions/submitVote';
 import { surveyFormSchema } from './yupSchema';
 import * as Styled from './styles';
 
 export const Main: FC = () => {
+  const dispatch = useDispatch();
+
   const {
     register,
     handleSubmit,
@@ -14,7 +18,7 @@ export const Main: FC = () => {
   } = useForm({ resolver: yupResolver(surveyFormSchema), mode: 'onChange' });
 
   const onSubmit = () => {
-    // dispatch(action.request(data));
+    dispatch(submitVoteAction.request());
   };
 
   return (
