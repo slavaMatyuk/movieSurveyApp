@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const LogoWrapper = styled.div`
+  width: 48px;
+  height: auto;
   transition: all 0.3s;
   &:hover {
     transform: scale(1.1);
