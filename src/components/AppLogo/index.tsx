@@ -7,7 +7,7 @@ export const AppLogo: FC<Props> = ({ isMobile = false }) => (
   <Styled.CustomLink to="/">
     <Styled.LogoWrapper>
       <Styled.LogoWithText>
-        <img src={LOGO_URL} alt="logo" height={isMobile ? '25' : '50'} width={isMobile ? '50' : '100'} />
+        <img src={LOGO_URL} alt="logo" height={isMobile ? '24' : '48'} width={isMobile ? '24' : '48'} />
       </Styled.LogoWithText>
     </Styled.LogoWrapper>
   </Styled.CustomLink>
