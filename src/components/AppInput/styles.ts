@@ -12,11 +12,10 @@ export const ErrorContainer = styled.div`
   font-size: 12px;
   margin: 8px 0;
   position: absolute;
-  top: -9px;
+  top: -5px;
   left: 18px;
 
   @media (max-width: 576px) {
-    top: -5px;
     left: 10px;
   }
 

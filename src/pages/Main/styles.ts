@@ -12,11 +12,19 @@ export const Container = styled.div`
   overflow: hidden;
 `;
 
+export const Description = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+`;
+
 export const ButtonContainer = styled.button`
   width: 100%;
   height: 54px;
   padding: 5px;
-  margin-top: 32px;
+  margin-top: 24px;
   border: none;
   border-radius: 6px;
   text-transform: uppercase;

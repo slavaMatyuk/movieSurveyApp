@@ -1,16 +1,19 @@
 import { createReducer } from 'typesafe-actions';
 import { submitVoteAction, SubmitVoteActionUnion } from '@store/actions/submitVote';
+import { SubmitVoteRequest } from '@models/SubmitVoteRequest';
 
 export interface SubmitVoteState {
   loading: boolean;
-  voteValue: number | null;
-  error: string | null;
+  submitVote: SubmitVoteRequest | null;
+  submitFilmError: string | null;
+  submitReviewError: string | null;
 }
 
 export const initialState: SubmitVoteState = {
   loading: false,
-  voteValue: null,
-  error: null,
+  submitVote: null,
+  submitFilmError: null,
+  submitReviewError: null,
 };
 
 export const submitVoteReducer = createReducer<SubmitVoteState, SubmitVoteActionUnion>(initialState)
@@ -21,11 +24,13 @@ export const submitVoteReducer = createReducer<SubmitVoteState, SubmitVoteAction
   .handleAction(submitVoteAction.success, (state, action) => ({
     ...state,
     loading: false,
-    voteValue: action.payload,
-    error: initialState.error,
+    submitVote: action.payload,
+    submitFilmError: initialState.submitFilmError,
+    submitReviewError: initialState.submitReviewError,
   }))
   .handleAction(submitVoteAction.failure, (state, action) => ({
     ...state,
     loading: false,
-    error: action.payload.error,
+    submitFilmError: action.payload.errors[0].detail,
+    submitReviewError: action.payload.errors[1].detail,
   }));

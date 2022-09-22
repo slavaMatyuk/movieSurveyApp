@@ -1,4 +1,4 @@
-export interface PayloadRequest {
+export interface SubmitVoteRequest {
   data: {
     type: string;
     attributes: {

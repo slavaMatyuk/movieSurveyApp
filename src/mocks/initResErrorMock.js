@@ -1,0 +1,8 @@
+export const initResErrorMock = {
+  errors: [
+    {
+      title: 'Internal Server Error',
+      detail: "Something went wrong. We're working on it!",
+    },
+  ],
+};

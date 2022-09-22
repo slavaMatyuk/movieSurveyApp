@@ -4,7 +4,7 @@ import { Navigator } from '@services/navigatorService';
 import { RouteNames } from '@constants/routeNames';
 
 export class SubmitVoteSagaWorker {
-  static *start() {
+  static *submitVote() {
     try {
       yield put(submitVoteAction.success());
       Navigator.push(RouteNames.RESULT);
@@ -15,5 +15,5 @@ export class SubmitVoteSagaWorker {
 }
 
 export function* submitVoteSaga() {
-  yield takeLatest(submitVoteAction.request, SubmitVoteSagaWorker.start);
+  yield takeLatest(submitVoteAction.request, SubmitVoteSagaWorker.submitVote);
 }
