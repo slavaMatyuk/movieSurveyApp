@@ -1,22 +1,23 @@
 import { GetResponse } from '@models/GetResponse';
+import { SubmitResponse } from '@models/SubmitResponse';
 import { SubmitVoteRequest } from '@models/SubmitVoteRequest';
+import { FetchService } from './FetchService';
 
-export class SurverService {
+export class SurveyService {
   static async getResponse() {
-    const response: GetResponse = await fetch('/api/v1/survey').then((res) => res.json());
+    const response: GetResponse = await FetchService.request('/survey');
     return response;
   }
 
-  static async submitVote(submitData: SubmitVoteRequest) {
-    const response = await fetch('/api/v1/survey/:id/answers', {
+  static async submitVote(submitData: Pick<SubmitVoteRequest, 'data'>, id: string) {
+    const response: SubmitResponse = await FetchService.request(`/survey${id}/answers`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ film: '', review: 4 }),
+      body: JSON.stringify(submitData),
     });
-    const content = await response.json();
-    return content;
+    return response;
   }
 }

@@ -3,10 +3,9 @@ import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom/client';
 import createStore from '@store/index';
 import App from './App';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
-if (process.env.NODE_ENV === 'development') {
-  require('./mocks/browser');
-}
+serviceWorkerRegistration.register();
 
 export const { store } = createStore();
 

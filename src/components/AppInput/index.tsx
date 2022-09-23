@@ -15,7 +15,6 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 export const AppInput = forwardRef<HTMLInputElement, InputProps>(
   ({ leftIcon, style, focus, fontSize = 'sm', error, ...props }, ref) => {
     const { isMobile } = useWindowDimensions();
-
     return (
       <Styled.InputContainer>
         {leftIcon || null}
