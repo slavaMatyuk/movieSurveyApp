@@ -65,10 +65,10 @@
           ["@configs", "./src/configs"],
           ["@styles", "./src/styles"]
         ],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
         "node": {
           "extensions": [".js", ".jsx", ".ts", ".tsx"]
-        },
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        }
       }
     }
   },
