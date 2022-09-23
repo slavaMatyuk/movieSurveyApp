@@ -11,8 +11,9 @@ export const Result: FC = () => {
     <Styled.Container>
       <AppText tag="h1" text="Thank you for participating!" />
       <Styled.VoteContainer>
-        <AppText tag="h3" text={'Interstellar'} />
-        <AppText tag="h3" text="5" />
+        {submitVote?.data.attributes.answers.map((answer) => {
+          return <AppText key={answer.questionId} tag="h3" text={answer.answer.toString()} />;
+        })}
       </Styled.VoteContainer>
     </Styled.Container>
   );
