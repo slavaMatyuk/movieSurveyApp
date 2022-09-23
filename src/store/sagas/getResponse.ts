@@ -1,11 +1,11 @@
 import { Effect, put, call, SagaReturnType, takeLatest } from 'redux-saga/effects';
-import { SurverService } from '@services/surveyService';
+import { SurveyService } from '@services/surveyService';
 import { getResponseAction } from '@store/actions/getResponse';
 
 export class GetResponseSagaWorker {
   static *getResponse() {
     try {
-      const response: SagaReturnType<typeof SurverService.getResponse> = yield call(SurverService.getResponse);
+      const response: SagaReturnType<typeof SurveyService.getResponse> = yield call(SurveyService.getResponse);
       yield put(getResponseAction.success(response));
     } catch (error: any) {
       yield put(getResponseAction.failure(error));

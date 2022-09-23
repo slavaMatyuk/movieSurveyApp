@@ -1,10 +1,10 @@
 import { createReducer } from 'typesafe-actions';
 import { submitVoteAction, SubmitVoteActionUnion } from '@store/actions/submitVote';
-import { SubmitVoteRequest } from '@models/SubmitVoteRequest';
+import { SubmitResponse } from '@models/SubmitResponse';
 
 export interface SubmitVoteState {
   loading: boolean;
-  submitVote: SubmitVoteRequest | null;
+  submitVote: SubmitResponse | null;
   submitFilmError: string | null;
   submitReviewError: string | null;
 }
