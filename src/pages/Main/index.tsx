@@ -6,8 +6,8 @@ import { AppForm } from '@components/AppForm';
 import { AppInput } from '@components/AppInput';
 import { surveyFormSchema } from './yupSchema';
 import * as Styled from './styles';
-import { getResponseAction } from '@store/actions/getResponse';
-import { initialFormSelector } from '@store/selectors/getResponse';
+import { getSurveyFormDataAction } from '@store/actions/getSurveyFormData';
+import { initialFormSelector } from '@store/selectors/getSurveyFormData';
 import { submitVoteAction } from '@store/actions/submitVote';
 
 export const Main: FC = () => {
@@ -37,7 +37,7 @@ export const Main: FC = () => {
   };
 
   useEffect(() => {
-    dispatch(getResponseAction.request());
+    dispatch(getSurveyFormDataAction.request());
   }, [dispatch]);
 
   return (

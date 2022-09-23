@@ -1,4 +1,4 @@
-export interface GetResponse {
+export interface GetSurveyFormData {
   data: {
     type: string;
     id: string;

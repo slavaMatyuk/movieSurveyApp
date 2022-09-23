@@ -15,7 +15,7 @@ export const Content = styled.div`
   min-width: 200px;
   width: 100%;
   max-width: 600px;
-  height: 57vh;
+  height: auto;
   border: 1px solid #dedede;
   background-color: #ffffff;
   box-shadow: 0 0 7px 1px #ffffff;

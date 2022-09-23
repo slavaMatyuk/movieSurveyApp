@@ -1,17 +1,17 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import { getResponseReducer, GetResponseState } from './getResponse';
+import { getSurveyFormDataReducer, GetSurveyFormDataState } from './getSurveyFormData';
 import { startAppReducer, StartAppState } from './startApp';
 import { submitVoteReducer, SubmitVoteState } from './submitVote';
 
 export interface AppState {
   startApp: StartAppState;
-  getResponse: GetResponseState;
+  getSurveyFormData: GetSurveyFormDataState;
   submitVote: SubmitVoteState;
 }
 
 export const rootReducer = combineReducers({
   startApp: startAppReducer,
-  getResponse: getResponseReducer,
+  getSurveyFormData: getSurveyFormDataReducer,
   submitVote: submitVoteReducer,
 });
 

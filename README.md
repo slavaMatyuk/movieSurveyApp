@@ -2,9 +2,9 @@
 
 ## Deployment
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f9f98b6a-7d2a-422b-8422/deploy-status?branch=master)](https://app.netlify.com/sites/movie-survey/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e51526bf-4e8e-4a8e-9477-8c882d72d913/deploy-status)](https://app.netlify.com/sites/survey-application/deploys)
 
-Link to deploy: https://test-movie-survey.netlify.app/
+Link to deploy: https://survey-application.netlify.app/main
 
 ## Project Structure
 

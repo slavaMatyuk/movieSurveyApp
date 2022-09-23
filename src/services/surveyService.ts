@@ -1,11 +1,11 @@
-import { GetResponse } from '@models/GetResponse';
+import { GetSurveyFormData } from '@models/GetSurveyFormData';
 import { SubmitResponse } from '@models/SubmitResponse';
 import { SubmitVoteRequest } from '@models/SubmitVoteRequest';
 import { FetchService } from './FetchService';
 
 export class SurveyService {
-  static async getResponse() {
-    const response: GetResponse = await FetchService.request('/survey');
+  static async getSurveyFormData() {
+    const response: GetSurveyFormData = await FetchService.request('/survey');
     return response;
   }
 

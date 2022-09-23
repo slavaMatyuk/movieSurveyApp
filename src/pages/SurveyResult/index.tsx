@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
-import { AppText } from '@components/AppText';
-import * as Styled from './styles';
 import { useSelector } from 'react-redux';
+import { AppText } from '@components/AppText';
 import { submitVoteStateSelector } from '@store/selectors/submitVote';
+import * as Styled from './styles';
 
-export const Result: FC = () => {
+export const SurveyResult: FC = () => {
   const { submitVote } = useSelector(submitVoteStateSelector);
 
   return (
